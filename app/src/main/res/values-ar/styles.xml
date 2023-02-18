@@ -1,0 +1,8 @@
+<resources>
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/pes</item>
+    </style>
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/pes</item>
+    </style>
+</resources>

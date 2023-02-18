@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/tache_item"
+    app:cardCornerRadius="16dp"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginTop="4dp"
+    app:cardUseCompatPadding="true">
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="10dp"
+                    android:tint="@color/darkBlue"
+                    app:civ_border_color="@color/gray"
+                    app:civ_border_width="1dp"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/t_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/img_avatar"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/darkgray"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="Site Web"/>
+
+                <TextView
+                    android:id="@+id/t_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/t_client_name"
+                    android:layout_toEndOf="@id/img_avatar"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    tools:text="12:00" />
+
+                <TextView
+                    android:id="@+id/t_client_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/t_title"
+                    android:layout_toEndOf="@id/img_avatar"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/midgray"
+                    android:textSize="14sp"
+                    tools:text="Mohamed abd al kader" />
+
+                <ImageView
+                    android:id="@+id/img_share"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_near_me"
+                    app:tint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/t_etat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/red"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/refus"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+
+
+        </FrameLayout>
+
+
+</androidx.cardview.widget.CardView>

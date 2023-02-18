@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/b_block"
+        android:icon="@drawable/ic_block"
+        android:title="@string/text_block" />
+    <item
+        android:id="@+id/b_signaler"
+        android:icon="@drawable/ic_sign"
+        android:title="@string/text_signaler" />
+    <item
+        android:id="@+id/b_transfer"
+        android:visible="false"
+        android:icon="@drawable/ic_block"
+        android:title="@string/text_block" />
+</menu>

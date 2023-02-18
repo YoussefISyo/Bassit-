@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_information"
+            android:title="@string/mes_informations"/>
+        <item
+            android:id="@+id/nav_partager_gagner"
+            android:title="@string/text_bonus" />
+
+        <item
+            android:id="@+id/nav_commission"
+            android:title="@string/commission" />
+
+        <item
+            android:id="@+id/nav_interest"
+            android:title="@string/points_d_inter_t" />
+        <item
+            android:id="@+id/nav_language"
+            android:title="@string/text_langues" />
+        <item
+            android:id="@+id/menu_none"
+            android:title=""
+            android:visible="false"/>
+    </group>
+    <item android:title="@string/text_contact">
+        <menu>
+            <item
+                android:id="@+id/nav_call"
+                android:title="@string/nous_appeler" />
+            <item
+                android:id="@+id/nav_email"
+                android:title="@string/email" />
+            <item
+                android:id="@+id/nav_facebook"
+                android:title="@string/text_facebook" />
+            <item
+                android:id="@+id/nav_insta"
+                android:title="@string/text_instagram" />
+            <item
+                android:id="@+id/nav_share"
+                android:title="@string/text_share" />
+            <item
+                android:id="@+id/nav_rate"
+                android:title="@string/text_rate_us" />
+        </menu>
+    </item>
+    <item android:title="@string/text_compte">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:title="@string/text_about" />
+            <item
+                android:id="@+id/nav_conditions"
+                android:title="@string/text_conditions_utilisation" />
+            <item
+                android:id="@+id/nav_privacy"
+                android:title="@string/text_privacy" />
+            <item
+                android:id="@+id/nav_logout"
+                android:title="@string/text_logout" />
+
+        </menu>
+    </item>
+</menu>

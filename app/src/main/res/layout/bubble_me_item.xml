@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="10dp">
+    <TextView
+        android:id="@+id/t_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="50dp"
+        android:ellipsize="end"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="8dp"
+        android:text="12:00"
+        android:textSize="12sp"
+        android:textColor="@color/color_gray"
+        />
+
+    <TextView
+        android:id="@+id/t_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/me_bg"
+        android:ellipsize="end"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="8dp"
+        android:text="My message"
+        android:textColor="@color/white"
+        android:autoLink="all"
+        android:textIsSelectable="true"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/t_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t_time"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/round_yellow"
+        android:padding="15dp"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="1 651 900,00"
+        tools:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/t_pos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t_time"
+        android:layout_alignParentRight="true"
+        android:background="@color/yellow"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="48dp"
+            android:src="@drawable/maps" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="128dp"
+            android:text="Cliquer ici pour voir la position partagée" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_date"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t_time"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/round_yellow"
+        android:padding="10dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/calendar_icon"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_calender"
+            android:tint="@color/darkgray" />
+
+        <TextView
+            android:id="@+id/t_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/calendar_icon"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/darkgray"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="10/10/2019\n10:15" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@id/t_time"
+        app:cardElevation="3dp"
+        tools:ignore="RtlHardcoded"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/yellow"
+            tools:src="@tools:sample/backgrounds/scenic" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+

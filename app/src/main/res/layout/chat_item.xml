@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingTop="10dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/circle_yellow"
+        android:src="@drawable/ic_user" />
+
+    <TextView
+        android:id="@+id/txvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/img"
+        android:textColor="@color/darkBlue"
+        android:textSize="16sp"
+        tools:text="Seddik" />
+
+    <TextView
+        android:id="@+id/txvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txvTitle"
+        android:layout_toEndOf="@id/img"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="#Alert_au_moustique_tigre #Article #Santé Alger, Tizi Ouzou, Bejaia, Mostaganem, Oran et Jijel les plus concernées."
+        android:textColor="#797979" />
+
+    <ImageView
+        android:id="@+id/i_new"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/circle_button_red"/>
+</RelativeLayout>
+

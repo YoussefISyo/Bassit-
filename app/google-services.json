@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "48368868344",
+    "firebase_url": "https://bassit-846e5.firebaseio.com",
+    "project_id": "bassit-846e5",
+    "storage_bucket": "bassit-846e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48368868344:android:783ee2ac3055647001d40d",
+        "android_client_info": {
+          "package_name": "com.optim.bassit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48368868344-cmcpne9i9l6ccsk5ai762ltotsmbsk0c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.optim.bassit",
+            "certificate_hash": "da425ffb960de189e2f88f9006c7f08cfdae47c9"
+          }
+        },
+        {
+          "client_id": "48368868344-u10geotojk53gjjqg6sbsn27f6phi4pb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFY-qVwGz5L093gzG406Sh-4L6zgxoXRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48368868344-uq272indldc87bb7nmh5u9bovn1tut8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.optim.bassit">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".App"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.activities.ShowNegociationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.MapSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.CommissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.SearchResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.DemandDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.AddDemandServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.FilterActivity"
+            android:exported="false"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".ui.activities.EditServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.CodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.PhoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.RegisterActivity2"
+            android:exported="false" />
+        <activity android:name=".ui.activities.rewardActivity" />
+        <activity android:name=".Main2Activity" /> <!-- android:usesCleartextTraffic="true" -->
+        <!--
+  android:networkSecurityConfig="@xml/network_security_config"
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5903730561297285~3743395548" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBh94VxYnV6_9IqTnPETwrCWsTVXfi8jFw" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="${crashlyticsCollectionEnabled}" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <service android:name=".MyFirebaseNotification">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".ui.activities.ServiceActivity" />
+        <activity android:name=".ui.activities.OnboardActivity" />
+        <activity android:name=".ui.activities.StatistiquesActivity" />
+        <activity android:name=".ui.activities.AddMontantActivity" />
+        <activity android:name=".ui.activities.SortieBonusActivity" />
+        <activity android:name=".ui.activities.AlbumsAddEditActivity" />
+        <activity android:name=".ui.activities.ConsommationActivity" />
+        <activity android:name=".ui.activities.ProfileActivity" />
+        <activity android:name=".ui.activities.myofferActivity" />
+        <activity android:name=".ui.activities.mynotifiActivity" />
+        <activity android:name=".ui.activities.offerActivity" />
+        <activity
+            android:name=".ui.activities.repreqAddEditActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.AdsAddEditActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.activities.ServiceAddEditActivity" />
+        <activity android:name=".ui.activities.MapFragActivity" />
+        <activity android:name=".ui.activities.InterestActivity" />
+        <activity android:name=".ui.activities.FinanceActivity" />
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="bassit-app.com"
+                    android:pathPrefix="/win"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activities.TransfererActivity" />
+        <activity android:name=".ui.activities.MapActivity" />
+        <activity android:name=".ui.activities.PartagerGagnerActivity" />
+        <activity android:name=".ui.activities.ChatActivity" />
+        <activity android:name=".ui.activities.UpdateMyProfileActivity" />
+        <activity android:name=".ui.activities.RechercheActivity" />
+        <activity
+            android:name=".ui.activities.PreviewPhotoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".ui.activities.RegisterActivity" />
+        <activity android:name=".ui.activities.LoginActivity" />
+        <activity android:name=".ui.activities.MainActivity" />
+        <activity android:name=".ui.activities.EditInformationActivity" />
+        <activity android:name=".ui.activities.OldReviewActivity" /> <!-- <provider -->
+        <!-- android:name="androidx.core.content.FileProvider" -->
+        <!-- android:authorities="${applicationId}.com.vansuita.pickimage.provider" -->
+        <!-- android:exported="false" -->
+        <!-- android:grantUriPermissions="true" -->
+        <!-- tools:replace="android:authorities"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
+        <!-- android:resource="@xml/picker_provider_paths" /> -->
+        <!-- </provider> -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.com.vansuita.pickimage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

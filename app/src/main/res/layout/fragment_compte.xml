@@ -1,0 +1,1754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.CompteFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bassit Pro"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/pes"
+                    android:layout_marginVertical="16dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/b_cons_points"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="12dp"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:background="@drawable/bg_card_points">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_star_filled"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:id="@+id/t_points"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="8dp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/b_cons_montant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="12dp"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_card_points">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_wallet"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:id="@+id/t_credit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="8dp"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/b_gagner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="18dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_card_stroke">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="12dp"
+                            android:text="@string/service_de_navigui"
+                            android:textColor="@color/greenSeafoam"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_monnaie"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="8dp">
+
+                                <TextView
+                                    android:id="@+id/t_gagner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:text=""
+                                    android:textColor="@color/greenSeafoam"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/t_gcount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:text=""
+                                    android:textColor="@color/greenSeafoam"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/b_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/text_more_info"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalscroll_reward"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:scrollbars="none"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="12dp"
+                            android:layout_marginStart="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="270dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:background="@drawable/bg_bronze">
+
+                                <RelativeLayout
+                                    android:id="@+id/container_bronze_first"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true">
+
+                                    <ImageView
+                                        android:id="@+id/img_reward"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/bronze" />
+
+                                    <TextView
+                                        android:id="@+id/txt_designation_reward"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_toEndOf="@id/img_reward"
+                                        android:text="@string/bronze"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txt_designation_reward"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_toEndOf="@id/img_reward"
+                                        android:text="@string/commission_payer_8"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/container_bronze_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_below="@id/container_bronze_first"
+                                    android:layout_marginTop="32dp"
+                                    android:layout_marginStart="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/vues_statistiques"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/situation_d_endettement"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="invisible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/photos_dans_albums"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/fontWhiteDisable"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="invisible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/situation_mensuel_annuel"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/fontWhiteDisable"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="invisible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/statut_d_taill_des_services"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/fontWhiteDisable"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="invisible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/apparaitre_toujours_sur_la_carte"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/fontWhiteDisable"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="invisible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/apparaitre_toujours_d_abord_dans_l_acceuil"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/fontWhiteDisable"
+                                            android:layout_gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:ellipsize="marquee"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/container_bronze_third"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/container_bronze_second"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp">
+
+                                    <TextView
+                                        android:id="@+id/txt_user_points"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentTop="true"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/slash_bronze"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginHorizontal="6dp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:text="/"
+                                        android:layout_toEndOf="@id/txt_user_points"/>
+
+                                    <TextView
+                                        android:id="@+id/txt_reward_points"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_toEndOf="@id/slash_bronze"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                </RelativeLayout>
+
+                                <Button
+                                    android:id="@+id/btn_active_bronze"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@id/container_bronze_third"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/round_button_white"
+                                    android:text="@string/Activate"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone"/>
+
+                                <Button
+                                    android:id="@+id/txt_encours_bronze"
+                                    android:layout_width="wrap_content"
+                                    android:enabled="false"
+                                    android:visibility="gone"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/round_button_yellow"
+                                    android:drawableStart="@drawable/ic_check"
+                                    android:drawableTint="@color/black"
+                                    android:text="@string/text_actif"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_below="@id/container_bronze_third"/>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="12dp"
+                            android:layout_marginStart="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="270dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:background="@drawable/bg_silver">
+
+                                <RelativeLayout
+                                    android:id="@+id/container_silver_first"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/img_reward_silver"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/silver" />
+
+                                    <TextView
+                                        android:id="@+id/txt_designation_reward_silver"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_toEndOf="@id/img_reward_silver"
+                                        android:text="@string/silver"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txt_designation_reward_silver"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_toEndOf="@id/img_reward_silver"
+                                        android:text="@string/commission_payer_6"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/container_silver_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_below="@id/container_silver_first"
+                                    android:layout_marginTop="32dp"
+                                    android:layout_marginStart="16dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/vues_statistiques"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/situation_d_endettement"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="visible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/photos_dans_albums"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="visible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/situation_mensuel_annuel"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="invisible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/statut_d_taill_des_services"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/fontWhiteDisable"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="invisible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/apparaitre_toujours_sur_la_carte"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/fontWhiteDisable"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="invisible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/apparaitre_toujours_d_abord_dans_l_acceuil"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/fontWhiteDisable"
+                                            android:layout_gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:ellipsize="marquee"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/container_silver_third"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/container_silver_second"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp">
+
+                                    <TextView
+                                        android:id="@+id/txt_user_points_silver"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentTop="true"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/slash_silver"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginHorizontal="6dp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:text="/"
+                                        android:layout_toEndOf="@id/txt_user_points_silver"/>
+
+                                    <TextView
+                                        android:id="@+id/txt_reward_points_silver"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_toEndOf="@id/slash_silver"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                </RelativeLayout>
+
+                                <Button
+                                    android:id="@+id/btn_active_silver"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@id/container_silver_third"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/round_button_white"
+                                    android:visibility="gone"
+                                    android:text="@string/Activate"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/txt_encours_silver"
+                                    android:layout_width="wrap_content"
+                                    android:enabled="false"
+                                    android:visibility="gone"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/round_button_yellow"
+                                    android:drawableStart="@drawable/ic_check"
+                                    android:drawableTint="@color/black"
+                                    android:text="@string/text_actif"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_below="@id/container_silver_third"/>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="12dp"
+                            android:layout_marginStart="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="270dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:background="@drawable/bg_gold">
+
+                                <RelativeLayout
+                                    android:id="@+id/container_gold_first"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/img_reward_gold"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/gold"
+                                        android:layout_centerVertical="true"/>
+
+                                    <TextView
+                                        android:id="@+id/txt_designation_reward_gold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_toEndOf="@id/img_reward_gold"
+                                        android:text="@string/gold"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txt_designation_reward_gold"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_toEndOf="@id/img_reward_gold"
+                                        android:text="@string/commission_payer_4"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/container_gold_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_below="@id/container_gold_first"
+                                    android:layout_marginTop="32dp"
+                                    android:layout_marginStart="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/vues_statistiques"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/situation_d_endettement"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="visible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/photos_dans_albums"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="visible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/situation_mensuel_annuel"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="visible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/statut_d_taill_des_services"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="invisible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/apparaitre_toujours_sur_la_carte"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/fontWhiteDisable"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="invisible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/apparaitre_toujours_d_abord_dans_l_acceuil"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/fontWhiteDisable"
+                                            android:layout_gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:ellipsize="marquee"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/container_gold_third"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/container_gold_second"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp">
+
+                                    <TextView
+                                        android:id="@+id/txt_user_points_gold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentTop="true"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/slash_gold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginHorizontal="6dp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:text="/"
+                                        android:layout_toEndOf="@id/txt_user_points_gold"/>
+
+                                    <TextView
+                                        android:id="@+id/txt_reward_points_gold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_toEndOf="@id/slash_gold"/>
+
+                                </RelativeLayout>
+
+                                <Button
+                                    android:id="@+id/btn_active_gold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@id/container_gold_third"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/round_button_white"
+                                    android:text="@string/Activate"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone"/>
+
+                                <Button
+                                    android:id="@+id/txt_encours_gold"
+                                    android:layout_width="wrap_content"
+                                    android:enabled="false"
+                                    android:visibility="gone"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/round_button_yellow"
+                                    android:drawableStart="@drawable/ic_check"
+                                    android:drawableTint="@color/black"
+                                    android:text="@string/text_actif"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_below="@id/container_gold_third"/>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="12dp"
+                            android:layout_marginStart="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="270dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:background="@drawable/bg_diamond">
+
+                                <RelativeLayout
+                                    android:id="@+id/container_diamond_first"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/img_reward_diamond"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/diamond"
+                                        android:layout_centerVertical="true"/>
+
+                                    <TextView
+                                        android:id="@+id/txt_designation_reward_diamond"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/white"
+                                        android:text="@string/diamond"
+                                        android:layout_toEndOf="@id/img_reward_diamond"
+                                        android:layout_marginStart="8dp"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txt_designation_reward_diamond"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_toEndOf="@id/img_reward_diamond"
+                                        android:text="@string/commission_payer_2"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/container_diamond_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_below="@id/container_diamond_first"
+                                    android:layout_marginTop="32dp"
+                                    android:layout_marginStart="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/vues_statistiques"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/situation_d_endettement"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="visible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/photos_dans_albums"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="visible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/situation_mensuel_annuel"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="visible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/statut_d_taill_des_services"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="visible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/apparaitre_toujours_sur_la_carte"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:ellipsize="marquee"
+                                            android:singleLine="true"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_check_circle"
+                                            android:visibility="visible"
+                                            app:tint="@color/white" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/apparaitre_toujours_d_abord_dans_l_acceuil"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/white"
+                                            android:layout_gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:ellipsize="marquee"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/container_diamond_third"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/container_diamond_second"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp">
+
+                                    <TextView
+                                        android:id="@+id/txt_user_points_diamond"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentTop="true"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/slash_diamond"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginHorizontal="6dp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:text="/"
+                                        android:layout_toEndOf="@id/txt_user_points_diamond"/>
+
+                                    <TextView
+                                        android:id="@+id/txt_reward_points_diamond"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_toEndOf="@id/slash_diamond"/>
+
+                                </RelativeLayout>
+
+                                <Button
+                                    android:id="@+id/btn_active_diamond"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@id/container_diamond_third"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/round_button_white"
+                                    android:text="@string/Activate"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone"/>
+
+                                <Button
+                                    android:id="@+id/txt_encours_diamond"
+                                    android:layout_width="wrap_content"
+                                    android:enabled="false"
+                                    android:visibility="gone"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/round_button_yellow"
+                                    android:drawableStart="@drawable/ic_check"
+                                    android:drawableTint="@color/black"
+                                    android:text="@string/text_actif"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_below="@id/container_diamond_third"/>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/other_suggestions"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fafafa"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/reward_item" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/obtenez_plus_de_points"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalscroll_bonus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:scrollbars="none"
+                    android:layout_margin="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="180dp"
+                            android:layout_height="200dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/ic_stars"
+                                    app:tint="@color/yellow" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginHorizontal="4dp"
+                                    android:text="@string/rate_us"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/btn_rateus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/bg_card_points"
+                                    android:paddingStart="20dp"
+                                    android:paddingEnd="20dp"
+                                    android:text="@string/_5_pts"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp" />
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="180dp"
+                            android:layout_height="200dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="8dp"
+                            android:layout_marginStart="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/ic_share"
+                                    app:tint="@color/yellow" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/share_app"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:layout_marginHorizontal="4dp"/>
+
+                                <Button
+                                    android:id="@+id/btn_shareapp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/bg_card_points"
+                                    android:paddingStart="20dp"
+                                    android:paddingEnd="20dp"
+                                    android:text="@string/_5_pts"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp" />
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="180dp"
+                            android:layout_height="200dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="8dp"
+                            android:layout_marginStart="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/fb_icon"
+                                    app:tint="@color/yellow" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/subscribe"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:layout_marginHorizontal="4dp"/>
+
+                                <Button
+                                    android:id="@+id/btn_likefb"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="@string/_5_pts"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:background="@drawable/bg_card_points"
+                                    android:paddingStart="20dp"
+                                    android:paddingEnd="20dp"
+                                    android:layout_marginBottom="8dp"/>
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="180dp"
+                            android:layout_height="200dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="8dp"
+                            android:layout_marginStart="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/instagram_icon"
+                                    app:tint="@color/yellow" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/subscribe_insta"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:layout_marginHorizontal="4dp"/>
+
+                                <Button
+                                    android:id="@+id/btn_likeinsta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="@string/_5_pts"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:background="@drawable/bg_card_points"
+                                    android:paddingStart="20dp"
+                                    android:paddingEnd="20dp"
+                                    android:layout_marginBottom="8dp"/>
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

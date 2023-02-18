@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="1dp"
+    android:paddingBottom="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="10dp"
+            tools:src="@tools:sample/avatars" />
+
+
+
+        <TextView
+            android:id="@+id/t_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/img"
+            android:text="HADRI Hichem"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/t_categorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t_name"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/img"
+            android:text="Métiers > paintre"
+            android:textSize="12sp" />
+
+
+
+        <TextView
+            android:id="@+id/t_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t_categorie"
+            tools:text="Title"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/img"
+            android:textSize="12sp" android:layout_marginBottom="10dp"/>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp" android:background="@color/gray"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="10dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
